@@ -38,7 +38,7 @@ public class SupremeOptions {
         return SupremeOptions.builder()
                 .autoUpdate(true)
                 .useLegacySupremeexpansionItemId(false)
-                .lang("en-US")
+                .lang("vi")
                 .customTickerDelay(2)
                 .enableGenerators(true)
                 .limitProductionGenerators(false)

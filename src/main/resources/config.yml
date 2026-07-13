@@ -1,7 +1,7 @@
 options:
   auto-update: true
   use-legacy-supremeexpansion-item-id: false
-  lang: zh-CN
+  lang: vi
   custom-ticker-delay: 2
   enable-generators: true
   limit-production-generators: false

@@ -1,12 +1,12 @@
-# Supreme - 至尊研究院 2.0
-至尊研究院是一个 Slimefun 附属，添加了100多种全新的资源，可以让你合成强力的新物品、武器、工具与防具。你可以使用钛合金、金合金、精金、钍来制作魔法、稀有、史诗、传说、至尊等级的物品。该附属还增加了12种全新的发电机，5种电容，还有更多...
+# Supreme - Viện Nghiên Cứu Tối Thượng 2.0
+Viện Nghiên Cứu Tối Thượng là một addon của Slimefun, thêm hơn 100 loại tài nguyên mới, cho phép bạn chế tạo các vật phẩm, vũ khí, công cụ và giáp mạnh mẽ. Bạn có thể sử dụng titanium, hợp kim vàng, adamantium, thorium để chế tạo các vật phẩm cấp Ma thuật, Quý hiếm, Huyền thoại, Truyền thuyết và Tối thượng. Addon này cũng bổ sung 12 loại máy phát điện mới, 5 loại tụ điện, và nhiều hơn nữa...
 
-## 重要信息
-该附属 "至尊研究院 2.0" 可以兼容 "至尊研究院 1.0"，只需要在配置文件中设置`use-legacy-supremeexpansion-item-id`为`true`即可。
+## Thông tin quan trọng
+Addon "Viện Nghiên Cứu Tối Thượng 2.0" tương thích với "Viện Nghiên Cứu Tối Thượng 1.0", chỉ cần đặt `use-legacy-supremeexpansion-item-id` thành `true` trong tệp cấu hình.
 
-## 下载
+## Tải xuống
 
-点击这里下载 Supreme: [下载 Supreme](https://builds.guizhanss.net/SlimefunGuguProject/Supreme/main)
+Nhấp vào đây để tải Supreme: [Tải Supreme](https://builds.guizhanss.net/SlimefunGuguProject/Supreme/main)
 
 <p align="center">
   <a href="https://github.com/SlimefunGuguProject/Supreme/actions/workflows/maven.yml">
@@ -17,34 +17,34 @@
   </a>
 </p>
 
-## 配置 (config.yml)
+## Cấu hình (config.yml)
 
-- **use-legacy-supremeexpansion-item-id** - 使用至尊研究院1.0的物品ID (默认: false)
-- **enable-generators** - 是否开启发电机 (默认: true)
-- **limit-production-generators** - 是否减少发电机5倍效率 (默认: false)
-- **enable-quarry** - 是否开启矿机 (默认: true)
-- **limit-production-quarry** - 是否限制矿机效率 (减少50%生产率) (默认: false)
-- **custom-ticker-delay** - 矿机生产的粘液刻延迟（类似货运的ticker-delay） (默认: 2)
-- **base-time-virtual-garden** - 虚拟花园的基础生产时间 (默认: 15)
-- **base-time-virtual-aquarium** - 虚拟水族馆的基础生产时间 (默认: 15)
-- **base-time-mob-collector** - 生物收集器的基础生产时间 (默认: 15)
-- **base-time-tech-generator** - 科技生成器的基础生产时间 (默认: 1800)
-- **tech-generator-max-amount** - 科技生成器的物品数量 (默认: 64)
-- **mob-tech-enable-bee** - 生物科技是否启用蜜蜂 (默认: true)
-- **mob-tech-enable-iron-golem** - 生物科技是否启用铁傀儡 (默认: true)
-- **mob-tech-enable-zombie** - 生物科技是否启用僵尸 (默认: true)
-- **quarry-custom-output** - 自定义矿机输出
-- **enable-weapons** - 是否启用武器
-- **enable-tools** - 是否启用工具
-- **enable-armor** - 是否启用护甲
-- **enable-tech** - 是否启用生物科技与卡片
-- **enable-item-converter-machine** - 是否启用物品转换器, 将旧版物品的ID转换为新版物品ID
-- **supreme-enchant** - 设置装备的附魔
-- **supreme-effects** - 设置护甲的药水效果
+- **use-legacy-supremeexpansion-item-id** - Sử dụng ID vật phẩm của Supreme 1.0 (mặc định: false)
+- **enable-generators** - Bật máy phát điện (mặc định: true)
+- **limit-production-generators** - Giảm 5 lần hiệu suất máy phát (mặc định: false)
+- **enable-quarry** - Bật máy khai thác (mặc định: true)
+- **limit-production-quarry** - Giới hạn hiệu suất máy khai thác (giảm 50% sản lượng) (mặc định: false)
+- **custom-ticker-delay** - Độ trễ tick sản xuất của máy khai thác (giống ticker-delay của vận chuyển) (mặc định: 2)
+- **base-time-virtual-garden** - Thời gian sản xuất cơ bản của Vườn Ảo (mặc định: 15)
+- **base-time-virtual-aquarium** - Thời gian sản xuất cơ bản của Thủy Cung Ảo (mặc định: 15)
+- **base-time-mob-collector** - Thời gian sản xuất cơ bản của Máy Thu Thập Sinh Vật (mặc định: 15)
+- **base-time-tech-generator** - Thời gian sản xuất cơ bản của Máy Tạo CNSH (mặc định: 1800)
+- **tech-generator-max-amount** - Số lượng vật phẩm tối đa của Máy Tạo CNSH (mặc định: 64)
+- **mob-tech-enable-bee** - Bật ong trong CNSH (mặc định: true)
+- **mob-tech-enable-iron-golem** - Bật iron golem trong CNSH (mặc định: true)
+- **mob-tech-enable-zombie** - Bật zombie trong CNSH (mặc định: true)
+- **quarry-custom-output** - Đầu ra tùy chỉnh cho máy khai thác
+- **enable-weapons** - Bật vũ khí
+- **enable-tools** - Bật công cụ
+- **enable-armor** - Bật giáp
+- **enable-tech** - Bật CNSH và thẻ
+- **enable-item-converter-machine** - Bật máy chuyển đổi vật phẩm, chuyển ID vật phẩm phiên bản cũ sang phiên bản mới
+- **supreme-enchant** - Cài đặt phù phép cho trang bị
+- **supreme-effects** - Cài đặt hiệu ứng thuốc cho giáp
 
-## 反馈 / 建议
+## Phản hồi / Góp ý
 
-你可以在问题追踪器提交问题，或发起pr。你也可以在discord上联系 : @WilianSantos#7381 或 @RelativoBR#9577
+Bạn có thể gửi vấn đề trong trình theo dõi vấn đề, hoặc tạo pull request. Bạn cũng có thể liên hệ trên Discord: @WilianSantos#7381 hoặc @RelativoBR#9577
 
 <p>
   <a href="https://discord.gg/slimefun">
@@ -55,41 +55,50 @@
   </a>
 </p>
 
-## 机器
-- **核心工厂** - 多方块机器 - 制作核心
-- **装备工厂** - 多方块机器 - 制作武器、护甲、装备
-- **魔法工厂** - 多方块机器 - 制作魔法
-- **电芯机** - 自动制作核心
-- **生物收集器** - 自动从附近生物收集战利品
-- **虚拟花园** - 可以培育一些资源
-- **铸锭机** - 将矿粉变为锭
-- **魔法工作台** - 全自动魔法工作台
-- **魔法祭坛** - 全自动古代祭坛
-- **铸造机** - 使用两种资源合成物品
-- **电动合成机** - 全自动增强型工作台
-- **虚拟水族馆** - 全自动收集海洋物品
-- **生物科技收集器** - 可以收集附近的生物科技
-- **突变机** - 可将物品进行突变
-- **生物科技生成器** - 使用卡片生成物品，使用生物科技来增加产能/减少电力消耗
-- **科技机器人** - 升级生物科技
-- 6种矿机，分别生产不同的资源
+## Máy móc
+- **Nhà Máy Lõi** - Máy đa khối - Chế tạo lõi
+- **Nhà Máy Trang Bị** - Máy đa khối - Chế tạo vũ khí, giáp, trang bị
+- **Nhà Máy Ma Thuật** - Máy đa khối - Chế tạo ma thuật
+- **Máy Lõi Điện** - Tự động chế tạo lõi
+- **Máy Thu Thập Sinh Vật** - Tự động thu thập chiến lợi phẩm từ sinh vật gần đó
+- **Vườn Ảo** - Có thể trồng một số tài nguyên
+- **Máy Đúc Thỏi** - Nấu quặng thành thỏi
+- **Bàn Chế Tạo Ma Thuật** - Bàn chế tạo ma thuật hoàn toàn tự động
+- **Đền Tế Ma Thuật** - Đền tế cổ đại hoàn toàn tự động
+- **Máy Đúc** - Kết hợp hai loại tài nguyên để tạo vật phẩm
+- **Bàn Chế Tạo Điện** - Bàn chế tạo tăng cường hoàn toàn tự động
+- **Thủy Cung Ảo** - Tự động thu thập vật phẩm đại dương
+- **Máy Thu Thập CNSH** - Thu thập CNSH gần đó
+- **Máy Đột Biến** - Có thể đột biến vật phẩm
+- **Máy Tạo CNSH** - Sử dụng thẻ để tạo vật phẩm, dùng CNSH để tăng sản lượng/giảm tiêu thụ điện
+- **Robot CNSH** - Nâng cấp CNSH
+- 6 loại máy khai thác, mỗi loại sản xuất tài nguyên khác nhau
 
-## 发电机
-- 五种大容量电容
-- **生物沼气发电机** - 燃烧动物生成的沼气发电
-- **火电发电机** - 需要下方点火进行发电
-- **风力发电机** - 需要置于迎风面中
-- **水力发电机** - 需要下方为水源进行发电
-- **光能发电机** - 需要日光/月光
-- **地能发电机** - 需要埋在地下
-- **万用发电机** - 任何地方都能发电
+## Máy phát điện
+- Năm loại tụ điện dung lượng lớn
+- **Máy Phát Khí Sinh Học** - Đốt khí sinh học từ động vật để phát điện
+- **Máy Phát Nhiệt Điện** - Cần có lửa bên dưới để phát điện
+- **Máy Phát Điện Gió** - Cần đặt ở nơi đón gió
+- **Máy Phát Thủy Điện** - Cần có nước bên dưới để phát điện
+- **Máy Phát Quang Năng** - Cần ánh sáng mặt trời/ánh trăng
+- **Máy Phát Địa Năng** - Cần chôn dưới lòng đất
+- **Máy Phát Đa Năng** - Có thể phát điện ở bất cứ đâu
 
-## 护甲/工具
-使用钛合金、金合金、精金、钍来制作魔法、稀有、史诗、传说、至尊等级的物品。
+## Giáp/Công cụ
+Sử dụng titanium, hợp kim vàng, adamantium, thorium để chế tạo các vật phẩm cấp Ma thuật, Quý hiếm, Huyền thoại, Truyền thuyết và Tối thượng.
 
-## 核心资源
-- 六种核心 - 合成材料
+## Tài nguyên cốt lõi
+- Sáu loại lõi - Nguyên liệu chế tạo
 
-## 魔法资源
-- 五行 - 金木水火土，合成材料
-- 四属性 - 合成材料
+## Tài nguyên ma thuật
+- Ngũ hành - Kim, Mộc, Thủy, Hỏa, Thổ - Nguyên liệu chế tạo
+- Bốn thuộc tính - Nguyên liệu chế tạo
+
+## Này bản fork từ upstream của nhóm dev người TQ xong dịch :D ờ có công tui patch hỗ trợ folia nữa :D 
+
+- Mà mấy đường link tải trực tiếp trên readme này tại tui lười chỉnh với muốn ghi công của họ , khuyên nên tải từ release.
+- Có thể bản dịch không đúng lắm mong thông cảm dùm.
+
+Credit: 
+---
+[SlimefunGuguProject](https://github.com/SlimefunGuguProject/Supreme)
