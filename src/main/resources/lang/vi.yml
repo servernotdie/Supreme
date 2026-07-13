@@ -1,0 +1,668 @@
+categories:
+  main: "&4Supreme 2.0"
+  resource: "&4Tài nguyên"
+  components: "&4Linh kiện"
+  cards: "&4Thẻ"
+  techmob: "&4CNSH"
+  machines: "&4Máy"
+  electric: "&4Điện"
+  tools: "&4Công cụ Supreme"
+  armor: "&4Giáp Supreme"
+  weapons: "&4Vũ khí Supreme"
+items:
+  supreme_adamantium_helmet:
+    name: "&f&lMũ Adamantium"
+    lore:
+      - "&f&lMũ làm từ adamantium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_aurum_helmet:
+    name: "&f&lMũ Aurum"
+    lore:
+      - "&f&lMũ làm từ aurum"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_titanium_helmet:
+    name: "&f&lMũ Titanium"
+    lore:
+      - "&f&lMũ làm từ titanium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_adamantium_chestplate:
+    name: "&f&lGiáp ngực Adamantium"
+    lore:
+      - "&f&lGiáp ngực làm từ adamantium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_aurum_chestplate:
+    name: "&f&lGiáp ngực Aurum"
+    lore:
+      - "&f&lGiáp ngực làm từ aurum"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_titanium_chestplate:
+    name: "&f&lGiáp ngực Titanium"
+    lore:
+      - "&f&lGiáp ngực làm từ titanium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_adamantium_leggings:
+    name: "&f&lQuần Adamantium"
+    lore:
+      - "&f&lQuần làm từ adamantium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_aurum_leggings:
+    name: "&f&lQuần Aurum"
+    lore:
+      - "&f&lQuần làm từ aurum"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_titanium_leggings:
+    name: "&f&lQuần Titanium"
+    lore:
+      - "&f&lQuần làm từ titanium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_adamantium_boots:
+    name: "&f&lỦng Adamantium"
+    lore:
+      - "&f&lỦng làm từ adamantium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_aurum_boots:
+    name: "&f&lỦng Aurum"
+    lore:
+      - "&f&lỦng làm từ aurum"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_titanium_boots:
+    name: "&f&lỦng Titanium"
+    lore:
+      - "&f&lỦng làm từ titanium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_boots_thornium:
+    name: "&f&lỦng Thorium"
+    lore:
+      - "&f&lỦng làm từ hợp kim thorium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_boots_magic:
+    name: "&a&lỦng Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật bí ẩn cổ xưa"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_boots_rare:
+    name: "&b&lỦng Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_boots_epic:
+    name: "&d&lỦng Huyền thoại"
+    lore:
+      - "&f&lĐược làm từ thorium huyền thoại"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_boots_legendary:
+    name: "&6&lỦng Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_boots_supreme:
+    name: "&4&lỦng Tối thượng"
+    lore:
+      - "&f&lĐôi ủng tối thượng của Supreme"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_chestplate_thornium:
+    name: "&f&lGiáp ngực Thorium"
+    lore:
+      - "&f&lGiáp ngực làm từ hợp kim thorium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_chestplate_magic:
+    name: "&a&lGiáp ngực Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật bí ẩn cổ xưa"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_chestplate_rare:
+    name: "&b&lGiáp ngực Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_chestplate_epic:
+    name: "&d&lGiáp ngực Huyền thoại"
+    lore:
+      - "&f&lĐược làm từ thorium huyền thoại"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_chestplate_legendary:
+    name: "&6&lGiáp ngực Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_chestplate_supreme:
+    name: "&4&lGiáp ngực Tối thượng"
+    lore:
+      - "&f&lGiáp ngực tối thượng của Supreme"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_helmet_thornium:
+    name: "&f&lMũ Thorium"
+    lore:
+      - "&f&lMũ làm từ hợp kim thorium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_helmet_magic:
+    name: "&a&lMũ Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật bí ẩn cổ xưa"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_helmet_rare:
+    name: "&b&lMũ Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_helmet_epic:
+    name: "&d&lMũ Huyền thoại"
+    lore:
+      - "&f&lĐược làm từ thorium huyền thoại"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_helmet_legendary:
+    name: "&6&lMũ Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_helmet_supreme:
+    name: "&4&lMũ Tối thượng"
+    lore:
+      - "&f&lMũ tối thượng của Supreme"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_leggings_thornium:
+    name: "&f&lQuần Thorium"
+    lore:
+      - "&f&lQuần làm từ hợp kim thorium"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_leggings_magic:
+    name: "&a&lQuần Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật cổ xưa bí ẩn"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_leggings_rare:
+    name: "&b&lQuần Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_leggings_epic:
+    name: "&d&lQuần Huyền thoại"
+    lore:
+      - "&f&lĐược làm từ thorium huyền thoại"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_leggings_legendary:
+    name: "&6&lQuần Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_leggings_supreme:
+    name: "&4&lQuần Tối thượng"
+    lore:
+      - "&f&lQuần tối thượng của Supreme"
+      - ""
+      - "&3Giáp Supreme"
+  supreme_adamantium_sword:
+    name: "&f&lKiếm Adamantium"
+    lore:
+      - "&f&lKiếm làm từ adamantium"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_aurum_sword:
+    name: "&f&lKiếm Aurum"
+    lore:
+      - "&f&lKiếm làm từ aurum"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_titanium_sword:
+    name: "&f&lKiếm Titanium"
+    lore:
+      - "&f&lKiếm làm từ titanium"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_bow_thornium:
+    name: "&f&lCung Thorium"
+    lore:
+      - "&f&lCung làm từ hợp kim thorium"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_bow_magic:
+    name: "&a&lCung Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật cổ xưa bí ẩn"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_bow_rare:
+    name: "&b&lCung Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_bow_epic:
+    name: "&d&lCung Huyền thoại"
+    lore:
+      - "&f&lKỹ thuật quấn tơ huyền thoại"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_bow_legendary:
+    name: "&6&lCung Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_bow_supreme:
+    name: "&4&lCung Tối thượng"
+    lore:
+      - "&f&lCung tối thượng của Supreme"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_shield_thornium:
+    name: "&f&lKhiên Thorium"
+    lore:
+      - "&f&lKhiên làm từ hợp kim thorium"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_shield_magic:
+    name: "&a&lKhiên Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật bí ẩn cổ xưa"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_shield_rare:
+    name: "&b&lKhiên Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_shield_epic:
+    name: "&d&lKhiên Huyền thoại"
+    lore:
+      - "&f&lCông trình phòng thủ huyền thoại"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_shield_legendary:
+    name: "&6&lKhiên Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_shield_supreme:
+    name: "&4&lKhiên Tối thượng"
+    lore:
+      - "&f&lKhiên tối thượng của Supreme"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_sword_thornium:
+    name: "&f&lKiếm Thorium"
+    lore:
+      - "&f&lKiếm làm từ hợp kim thorium"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_sword_magic:
+    name: "&a&lKiếm Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật bí ẩn cổ xưa"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_sword_rare:
+    name: "&b&lKiếm Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_sword_epic:
+    name: "&d&lKiếm Huyền thoại"
+    lore:
+      - "&f&lSắc bén vô cùng"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_sword_legendary:
+    name: "&6&lKiếm Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_sword_supreme:
+    name: "&4&lKiếm Tối thượng"
+    lore:
+      - "&f&lKiếm tối thượng làm từ thorium"
+      - ""
+      - "&3Vũ khí Supreme"
+  supreme_adamantium_axe:
+    name: "&f&lRìu Adamantium"
+    lore:
+      - "&f&lRìu làm từ adamantium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_aurum_axe:
+    name: "&f&lRìu Aurum"
+    lore:
+      - "&f&lRìu làm từ aurum"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_titanium_axe:
+    name: "&f&lRìu Titanium"
+    lore:
+      - "&f&lRìu làm từ titanium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_adamantium_pickaxe:
+    name: "&f&lCuốc Adamantium"
+    lore:
+      - "&f&lCuốc làm từ adamantium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_aurum_pickaxe:
+    name: "&f&lCuốc Aurum"
+    lore:
+      - "&f&lCuốc làm từ aurum"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_titanium_pickaxe:
+    name: "&f&lCuốc Titanium"
+    lore:
+      - "&f&lCuốc làm từ titanium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_adamantium_shovel:
+    name: "&f&lXẻng Adamantium"
+    lore:
+      - "&f&lXẻng làm từ adamantium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_aurum_shovel:
+    name: "&f&lXẻng Aurum"
+    lore:
+      - "&f&lXẻng làm từ aurum"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_titanium_shovel:
+    name: "&f&lXẻng Titanium"
+    lore:
+      - "&f&lXẻng làm từ titanium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_axe_thornium:
+    name: "&f&lRìu Thorium"
+    lore:
+      - "&f&lRìu làm từ hợp kim thorium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_axe_magic:
+    name: "&a&lRìu Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật cổ xưa bí ẩn"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_axe_rare:
+    name: "&b&lRìu Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_axe_epic:
+    name: "&d&lRìu Huyền thoại"
+    lore:
+      - "&f&lKỹ thuật phá lưỡi huyền thoại"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_axe_legendary:
+    name: "&6&lRìu Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_axe_supreme:
+    name: "&4&lRìu Tối thượng"
+    lore:
+      - "&f&lRìu tối thượng của Supreme"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_pickaxe_thornium:
+    name: "&f&lCuốc Thorium"
+    lore:
+      - "&f&lCuốc làm từ hợp kim thorium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_pickaxe_magic:
+    name: "&a&lCuốc Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật cổ xưa bí ẩn"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_pickaxe_rare:
+    name: "&b&lCuốc Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_pickaxe_epic:
+    name: "&d&lCuốc Huyền thoại"
+    lore:
+      - "&f&lKỹ thuật mài giũa huyền thoại"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_pickaxe_legendary:
+    name: "&6&lCuốc Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_pickaxe_supreme:
+    name: "&4&lCuốc Tối thượng"
+    lore:
+      - "&f&lCuốc tối thượng của Supreme"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_shovel_thornium:
+    name: "&f&lXẻng Thorium"
+    lore:
+      - "&f&lXẻng làm từ hợp kim thorium"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_shovel_magic:
+    name: "&a&lXẻng Ma thuật"
+    lore:
+      - "&f&lChứa đựng phép thuật cổ xưa bí ẩn"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_shovel_rare:
+    name: "&b&lXẻng Quý hiếm"
+    lore:
+      - "&f&lQuý hiếm và giá trị"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_shovel_epic:
+    name: "&d&lXẻng Huyền thoại"
+    lore:
+      - "&f&lKỹ thuật ghép mộng huyền thoại"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_shovel_legendary:
+    name: "&6&lXẻng Truyền thuyết"
+    lore:
+      - "&f&lKỹ thuật chế tác truyền thuyết tạo nên kiệt tác"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_shovel_supreme:
+    name: "&4&lXẻng Tối thượng"
+    lore:
+      - "&f&lXẻng tối thượng của Supreme"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_mob_collector_tool_i:
+    name: "&6Công cụ bắt CNSH I"
+    lore:
+      - ""
+      - "&fDùng để bắt ong và iron golem"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_mob_collector_tool_ii:
+    name: "&6Công cụ bắt CNSH II"
+    lore:
+      - ""
+      - "&fDùng để bắt ong và iron golem"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_mob_collector_tool_iii:
+    name: "&6Công cụ bắt CNSH III"
+    lore:
+      - ""
+      - "&fDùng để bắt ong và iron golem"
+      - ""
+      - "&3Công cụ Supreme"
+  supreme_generator_mob_basic:
+    name: "&bMáy phát khí sinh học cơ bản"
+    lore:
+      - "&fThu khí sinh học từ phân bò, heo, cừu"
+      - "&fĐốt khí sinh học để phát điện"
+      - "&8(Cần động vật trong bán kính 3 ô)"
+      - ""
+      - "&3Máy Supreme"
+  supreme_generator_mob_medium:
+    name: "&bMáy phát khí sinh học trung cấp"
+    lore:
+      - "&fThu khí sinh học từ phân bò, heo, cừu"
+      - "&fĐốt khí sinh học để phát điện"
+      - "&8(Cần động vật trong bán kính 6 ô)"
+      - ""
+      - "&3Máy Supreme"
+  supreme_generator_mob_advanced:
+    name: "&bMáy phát khí sinh học cao cấp"
+    lore:
+      - "&fThu khí sinh học từ phân bò, heo, cừu"
+      - "&fĐốt khí sinh học để phát điện"
+      - "&8(Cần động vật trong bán kính 9 ô)"
+      - ""
+      - "&3Máy Supreme"
+  supreme_aurum_capacitor:
+    name: "&9Tụ Aurum"
+    lore:
+      - ""
+      - "&3Máy Supreme"
+  supreme_titanium_capacitor:
+    name: "&9Tụ Titanium"
+    lore:
+      - ""
+      - "&3Máy Supreme"
+  supreme_adamantium_capacitor:
+    name: "&9Tụ Adamantium"
+    lore:
+      - ""
+      - "&3Máy Supreme"
+  supreme_thornium_capacitor:
+    name: "&9Tụ Thorium"
+    lore:
+      - ""
+      - "&3Máy Supreme"
+  supreme_supreme_capacitor:
+    name: "&9Tụ Supreme"
+    lore:
+      - "&c&oKhuyến nghị không sử dụng quá một tụ này"
+      - "&c&otrong mỗi mạng lưới năng lượng"
+      - ""
+      - "&3Máy Supreme"
+  supreme_basic_ignis_generator:
+    name: "&9Máy phát nhiệt điện cơ bản"
+    lore:
+      - "&fPhải có lửa bên dưới"
+      - ""
+      - "&3Máy Supreme"
+  supreme_ignis_generator:
+    name: "&9Máy phát nhiệt điện Supreme"
+    lore:
+      - "&fPhải có lửa bên dưới"
+      - ""
+      - "&3Máy Supreme"
+  supreme_basic_ventus_generator:
+    name: "&9Máy phát điện gió cơ bản"
+    lore:
+      - "&fĐặt máy phát"
+      - "&fở nơi đón gió"
+      - ""
+      - "&3Máy Supreme"
+  supreme_ventus_generator:
+    name: "&9Máy phát điện gió Supreme"
+    lore:
+      - "&fĐặt máy phát"
+      - "&fở nơi đón gió"
+      - ""
+      - "&3Máy Supreme"
+  supreme_basic_aqua_generator:
+    name: "&9Máy phát thủy điện cơ bản"
+    lore:
+      - "&fPhải có nước bên dưới"
+      - ""
+      - "&3Máy Supreme"
+  supreme_aqua_generator:
+    name: "&9Máy phát thủy điện Supreme"
+    lore:
+      - "&fPhải có nước bên dưới"
+      - ""
+      - "&3Máy Supreme"
+  supreme_basic_lux_generator:
+    name: "&9Máy phát quang năng cơ bản"
+    lore:
+      - "&fĐặt ngoài trời"
+      - "&fdưới ánh sáng mặt trời hoặc mặt trăng"
+      - ""
+      - "&3Máy Supreme"
+  supreme_lux_generator:
+    name: "&9Máy phát quang năng Supreme"
+    lore:
+      - "&fĐặt máy phát"
+      - "&fở nơi đón gió"
+      - ""
+      - "&3Máy Supreme"
+  supreme_basic_lumium_generator:
+    name: "&9Máy phát địa năng cơ bản"
+    lore:
+      - "&fPhải chôn dưới lòng đất"
+      - ""
+      - "&3Máy Supreme"
+  supreme_lumium_generator:
+    name: "&9Máy phát địa năng Supreme"
+    lore:
+      - "&fPhải chôn dưới lòng đất"
+      - ""
+      - "&3Máy Supreme"
+  supreme_thornium_generator:
+    name: "&9Máy phát đa năng cơ bản"
+    lore:
+      - "&fCó thể phát điện ở bất cứ đâu"
+      - ""
+      - "&3Máy Supreme"
+  supreme_supreme_generator:
+    name: "&9Máy phát đa năng Supreme"
+    lore:
+      - "&fCó thể phát điện ở bất cứ đâu"
+      - ""
+      - "&3Máy Supreme"
+messages:
+  no-input: "&cVui lòng đặt vật phẩm vào đây"
+  output-no-space: "&cKhông có chỗ trống đầu ra!"
+  not-enough-power: "&cKhông đủ năng lượng!"

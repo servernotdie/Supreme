@@ -49,20 +49,20 @@ import org.springframework.scheduling.annotation.Async;
 public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_I = new SupremeItemStack(
-      "MOB_TECH_COLLECTOR_MACHINE", Material.NETHER_GOLD_ORE, "&b生物科技收集器I", "",
-      "&f这个机器允许你收集", "&f附近生物的生物科技(3格)", "",
+      "MOB_TECH_COLLECTOR_MACHINE", Material.NETHER_GOLD_ORE, "&bMáy thu thập công nghệ sinh vật I", "",
+      "&fMáy này cho phép bạn thu thập", "&fcông nghệ sinh vật gần đó (3 ô)", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
-      LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3至尊机器");
+      LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Máy Supreme");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_I = new ItemStack[]{
       SupremeComponents.RUSTLESS_MACHINE, MobCollectorTools.MOB_COLLECTOR_I, SupremeComponents.RUSTLESS_MACHINE,
       SupremeComponents.INDUCTIVE_MACHINE, MobCollectorTools.MOB_COLLECTOR_I, SupremeComponents.INDUCTIVE_MACHINE,
       SupremeComponents.AURUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER, SupremeComponents.AURUM_PLATE};
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_II = new SupremeItemStack(
-      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_II", Material.NETHER_GOLD_ORE, "&b生物科技收集器II", "",
-      "&f这个机器允许你收集", "&f附近生物的生物科技(6格)", "",
+      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_II", Material.NETHER_GOLD_ORE, "&bMáy thu thập CNSH II", "",
+      "&fMáy này cho phép bạn thu thập", "&fCNSH của sinh vật gần đó (6 ô)", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(1),
-      LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3至尊机器");
+      LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Máy Supreme");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_II = new ItemStack[]{
       SupremeComponents.CONVEYANCE_MACHINE, SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
       SupremeComponents.INDUCTOR_MACHINE, MobTechCollector.MOB_TECH_COLLECTOR_MACHINE_I,
@@ -70,10 +70,10 @@ public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
       SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_III = new SupremeItemStack(
-      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_III", Material.NETHER_GOLD_ORE, "&b生物科技收集器III", "",
-      "&f这个机器允许你收集", "&f附近生物的生物科技(9格)", "",
+      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_III", Material.NETHER_GOLD_ORE, "&bMáy thu thập CNSH III", "",
+      "&fMáy này cho phép bạn thu thập", "&fCNSH của sinh vật gần đó (9 ô)", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(1),
-      LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3至尊机器");
+      LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Máy Supreme");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
       SupremeCetrus.CETRUS_LUX, SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
       MobTechCollector.MOB_TECH_COLLECTOR_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
@@ -135,7 +135,7 @@ public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
   @Nonnull
   @Override
   public String getRecipeSectionLabel(@Nonnull Player p) {
-    return "&7收集:";
+    return "&7Thu thập:";
   }
 
 

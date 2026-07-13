@@ -48,30 +48,30 @@ import java.util.Objects;
 public class TechMutation extends SimpleItemContainerMachine implements Radioactive {
 
   public static final SlimefunItemStack TECH_MUTATION_I = new SupremeItemStack("SUPREME_TECH_MUTATION_I",
-      Material.SLIME_BLOCK, "&b突变机", "", "&f将物品进行突变", "",
+      Material.SLIME_BLOCK, "&bMáy đột biến", "", "&fĐột biến vật phẩm", "",
       LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3至尊机器");
+      "&3Máy Supreme");
   public static final ItemStack[] RECIPE_TECH_MUTATION_I = {SupremeComponents.INDUCTIVE_MACHINE,
       SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.REINFORCED_PLATE,
       SlimefunItems.NUCLEAR_REACTOR, SlimefunItems.REINFORCED_PLATE, SupremeComponents.RUSTLESS_MACHINE,
       SupremeCore.CORE_OF_DEATH, SupremeComponents.RUSTLESS_MACHINE};
 
   public static final SlimefunItemStack TECH_MUTATION_II = new SupremeItemStack("SUPREME_TECH_MUTATION_II",
-      Material.SLIME_BLOCK, "&b突变机II", "", "&f将物品进行突变", "",
-      "&f有几率获得2倍产物", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
+      Material.SLIME_BLOCK, "&bMáy đột biến II", "", "&fĐột biến vật phẩm", "",
+      "&fCó tỷ lệ nhận sản phẩm x2", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3至尊机器");
+      "&3Máy Supreme");
   public static final ItemStack[] RECIPE_TECH_MUTATION_II = new ItemStack[]{SupremeComponents.CONVEYANCE_MACHINE,
       SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
       TechMutation.TECH_MUTATION_I, SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.THORNERITE,
       SupremeCetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack TECH_MUTATION_III = new SupremeItemStack("SUPREME_TECH_MUTATION_III",
-      Material.SLIME_BLOCK, "&b突变机III", "", "&f将物品进行突变",
-      "", "&f有几率获得4倍产物", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
+      Material.SLIME_BLOCK, "&bMáy đột biến III", "", "&fĐột biến vật phẩm",
+      "", "&fCó tỷ lệ nhận sản phẩm x4", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3至尊机器");
+      "&3Máy Supreme");
   public static final ItemStack[] RECIPE_TECH_MUTATION_III = new ItemStack[]{SupremeComponents.THORNERITE,
       SupremeAttribute.getImpetus(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
       TechMutation.TECH_MUTATION_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
@@ -196,7 +196,7 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
 
       } else {
 
-        invalidProgressBar(inv, "&c无效的物品输入");
+        invalidProgressBar(inv, "&cVật phẩm đầu vào không hợp lệ");
 
       }
 
@@ -206,9 +206,9 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
 
         if (UtilMachine.getRandomInt() <= (itemProcessing.getChance() * getUpgradeLuck())) {
           inv.pushItem(((ItemStack) itemProcessing.getOutput()).clone(), this.getOutputSlots());
-          invalidProgressBar(inv, Material.BLACK_STAINED_GLASS_PANE, " 成功! ");
+          invalidProgressBar(inv, Material.BLACK_STAINED_GLASS_PANE, " Thành công! ");
         } else {
-          invalidProgressBar(inv, Material.BLACK_STAINED_GLASS_PANE, " 失败! ");
+          invalidProgressBar(inv, Material.BLACK_STAINED_GLASS_PANE, " Thất bại! ");
         }
 
         processing.put(b, null);
@@ -247,10 +247,10 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
               Math.round(ticksTotal / this.getSpeed()), result);
         }
       } else {
-        invalidProgressBar(inv, "&c电力不足");
+        invalidProgressBar(inv, "&cThiếu điện");
       }
     } else {
-      invalidProgressBar(inv, "&c机器运行异常");
+      invalidProgressBar(inv, "&cMáy chạy bất thường");
     }
   }
 
@@ -281,7 +281,7 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
         chance = 100;
       }
       displayRecipes.add(recipe.getInput1());
-      displayRecipes.add(new CustomItemStack(Material.NAME_TAG, " " + chance + "% 成功率"));
+      displayRecipes.add(new CustomItemStack(Material.NAME_TAG, " " + chance + "% tỷ lệ thành công"));
       displayRecipes.add(recipe.getInput2());
       displayRecipes.add(recipe.getOutput());
       displayRecipes.add(separator);

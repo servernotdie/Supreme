@@ -13,7 +13,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
@@ -27,7 +26,7 @@ import org.bukkit.inventory.ItemStack;
 public class MultiBlockCoreFabricator extends MultiBlockMachine implements NotPlaceable {
 
   public static final SlimefunItemStack CORE_FABRICATOR = new SupremeItemStack("SUPREME_MULTIBLOCK_CORE",
-      Material.SHROOMLIGHT, "&e核心工厂", "", "&7&o你可以在这制造核心！", "", "&a多方块机器");
+      Material.SHROOMLIGHT, "&eNhà máy lõi", "", "&7&oBạn có thể chế tạo lõi ở đây!", "", "&aMáy đa khối");
   public static final RecipeType MACHINE_CORE_FABRICATOR = new RecipeType(
       new NamespacedKey(Supreme.inst(), "SUPREME_MULTIBLOCK_CORE_KEY"), CORE_FABRICATOR);
 
@@ -88,11 +87,12 @@ public class MultiBlockCoreFabricator extends MultiBlockMachine implements NotPl
             }
           }
 
-          Bukkit.getScheduler().runTaskLater(Supreme.inst(),
-              () -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1F, 1F), 55L);
+          Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(dispenser.getLocation(),
+              task -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1F, 1F), 55L);
           for (int i = 1; i < 7; i++) {
-            Bukkit.getScheduler().runTaskLater(Supreme.inst(),
-                () -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_METAL_PLACE, 7F, 1F), i * 5L);
+            final long delayTicks = i * 5L;
+            Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(dispenser.getLocation(),
+                task -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_METAL_PLACE, 7F, 1F), delayTicks);
           }
 
           if (outputInv != null) {

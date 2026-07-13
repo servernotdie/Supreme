@@ -25,7 +25,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSection == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "配置 \"supreme-enchant\" 缺失!");
+                    "Thiếu cấu hình \"supreme-enchant\"!");
             return;
         }
 
@@ -42,7 +42,7 @@ public class EnchantsAndEffectsUtil {
                 lore.add("");
             }
 
-            lore.add(ChatColor.AQUA + "灵魂绑定");
+            lore.add(ChatColor.AQUA + "Ràng buộc linh hồn");
 
             // find path
             String itemPath = getNewIdSupremeLegacy(item.getItemId()).toLowerCase();
@@ -60,7 +60,7 @@ public class EnchantsAndEffectsUtil {
                 }
             } else {
                 Supreme.inst().log(Level.SEVERE,
-                        "配置 " + itemPath + " 缺失!");
+                        "Thiếu cấu hình " + itemPath + " !");
             }
 
             // add meta
@@ -74,7 +74,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSection == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "配置 \"supreme-enchant\" 缺失!");
+                    "Thiếu cấu hình \"supreme-enchant\"!");
             return;
         }
 
@@ -91,7 +91,7 @@ public class EnchantsAndEffectsUtil {
                 lore.add("");
             }
 
-            lore.add(ChatColor.AQUA + "灵魂绑定");
+            lore.add(ChatColor.AQUA + "Ràng buộc linh hồn");
 
             // find path
             String itemPath = getNewIdSupremeLegacy(item.getItemId()).toLowerCase();
@@ -107,7 +107,7 @@ public class EnchantsAndEffectsUtil {
                 }
             } else {
                 Supreme.inst().log(Level.SEVERE,
-                        "配置 " + itemPath + " 缺失!");
+                        "Thiếu cấu hình " + itemPath + " !");
             }
 
             // add meta
@@ -142,7 +142,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSectionEffects == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "配置 \"supreme-enchant\" 缺失!");
+                    "Thiếu cấu hình \"supreme-enchant\"!");
             return effect;
         }
 
@@ -178,7 +178,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSectionEffects == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "配置 \"supreme-enchant\" 缺失!");
+                    "Thiếu cấu hình \"supreme-enchant\"!");
             return;
         }
 

@@ -100,19 +100,19 @@ public final class EnergyGenerator extends MenuBlock implements EnergyNetProvide
       if (this.generate == 0) {
         inv.replaceExistingItem(13, new CustomItemStack(
                 Material.RED_STAINED_GLASS_PANE,
-                "&c未发电",
-                "&7类型: &6" + this.type,
-                "&7已储存: &6" + UtilEnergy.format(getCharge(l)) + " J",
-                "&7容量: &6" + UtilEnergy.format(this.buffer) + " J"
+                "&cKhông phát điện",
+                "&7Loại: &6" + this.type,
+                "&7Đã lưu: &6" + UtilEnergy.format(getCharge(l)) + " J",
+                "&7Dung lượng: &6" + UtilEnergy.format(this.buffer) + " J"
         ));
       } else {
         inv.replaceExistingItem(13, new CustomItemStack(
                 Material.GREEN_STAINED_GLASS_PANE,
-                "&a发电中",
-                "&7类型: &6" + this.type,
-                "&7发电速度: &6" + UtilEnergy.format(this.generate) + " J/粘液刻",
-                "&7已储存: &6" + UtilEnergy.format(getCharge(l)) + " J",
-                "&7容量: &6" + UtilEnergy.format(this.buffer) + " J"
+                "&aĐang phát điện",
+                "&7Loại: &6" + this.type,
+                "&7Tốc độ phát: &6" + UtilEnergy.format(this.generate) + " J/tick",
+                "&7Đã lưu: &6" + UtilEnergy.format(getCharge(l)) + " J",
+                "&7Dung lượng: &6" + UtilEnergy.format(this.buffer) + " J"
         ));
       }
     }
