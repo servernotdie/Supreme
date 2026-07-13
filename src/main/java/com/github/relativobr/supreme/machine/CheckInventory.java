@@ -32,7 +32,6 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -48,9 +47,9 @@ import org.springframework.scheduling.annotation.Async;
 public class CheckInventory extends SlimefunItem implements InventoryBlock {
 
   public static final SlimefunItemStack CHECK_INVENTORY = new SlimefunItemStack("SUPREME_CHECK_INVENTORY",
-      Material.REDSTONE_LAMP, "&b箱子物品检测器", "", "&f检测相邻的箱子是否拥有指定物品,",
-      "&f会检测六个方向的箱子,", "&f如果找到指定物品, 方块会被点亮", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
-      LoreBuilder.speed(1), UtilEnergy.energyPowerPerSecond(0), "", "&3至尊机器");
+      Material.REDSTONE_LAMP, "&bMáy dò vật phẩm rương", "", "&fPhát hiện rương lân cận có vật phẩm chỉ định không,",
+      "&fSẽ kiểm tra rương 6 hướng,", "&fNếu tìm thấy vật phẩm chỉ định, khối sẽ sáng lên", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
+      LoreBuilder.speed(1), UtilEnergy.energyPowerPerSecond(0), "", "&3Máy Supreme");
   private static final ItemStack[] RECIPE_CHECK_INVENTORY = new ItemStack[]{SupremeComponents.ALLOY_AURUM,
       new ItemStack(Material.REDSTONE_LAMP), SupremeComponents.ALLOY_AURUM, SupremeComponents.INDUCTIVE_MACHINE,
       SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, new ItemStack(Material.REDSTONE_BLOCK),
@@ -147,7 +146,7 @@ public class CheckInventory extends SlimefunItem implements InventoryBlock {
 
   public static void checkItemInInventory(@Nonnull ItemStack itemStack, @Nonnull Block block, Block blockTarget) {
     if (blockTarget != null) {
-      Bukkit.getScheduler().scheduleSyncDelayedTask(Supreme.inst(), (Runnable) () -> {
+      Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(blockTarget.getLocation(), task -> {
         final BlockState targetState = blockTarget.getState();
         if (targetState instanceof InventoryHolder) {
           final Inventory targetInv = ((InventoryHolder) targetState).getInventory();
@@ -158,7 +157,7 @@ public class CheckInventory extends SlimefunItem implements InventoryBlock {
         } else {
           changeLightable(block, false);
         }
-      }, 1);
+      }, 1L);
     }
   }
 

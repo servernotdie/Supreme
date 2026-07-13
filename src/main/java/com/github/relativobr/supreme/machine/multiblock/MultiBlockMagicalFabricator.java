@@ -13,7 +13,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
@@ -27,8 +26,8 @@ import org.bukkit.inventory.ItemStack;
 public class MultiBlockMagicalFabricator extends MultiBlockMachine implements NotPlaceable {
 
   public static final SlimefunItemStack MAGICAL_FABRICATOR = new SupremeItemStack("SUPREME_MULTIBLOCK_MAGICAL",
-      Material.CRYING_OBSIDIAN, "&e魔法工厂", "", "&7&o你可以在这里制造魔法物品!", "",
-      "&a多方块机器");
+      Material.CRYING_OBSIDIAN, "&eNhà máy ma thuật", "", "&7&oBạn có thể chế tạo vật phẩm ma thuật ở đây!", "",
+      "&aMáy đa khối");
   public static final RecipeType MACHINE_MAGICAL_FABRICATOR = new RecipeType(
       new NamespacedKey(Supreme.inst(), "SUPREME_MULTIBLOCK_MAGICAL_KEY"), MAGICAL_FABRICATOR);
 
@@ -89,11 +88,12 @@ public class MultiBlockMagicalFabricator extends MultiBlockMachine implements No
             }
           }
 
-          Bukkit.getScheduler().runTaskLater(Supreme.inst(),
-              () -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1F, 1F), 55L);
+          Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(dispenser.getLocation(),
+              task -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1F, 1F), 55L);
           for (int i = 1; i < 7; i++) {
-            Bukkit.getScheduler().runTaskLater(Supreme.inst(),
-                () -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_METAL_PLACE, 7F, 1F), i * 5L);
+            final long delayTicks = i * 5L;
+            Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(dispenser.getLocation(),
+                task -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_METAL_PLACE, 7F, 1F), delayTicks);
           }
 
           if (outputInv != null) {

@@ -14,7 +14,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
@@ -30,8 +29,8 @@ import org.bukkit.inventory.ItemStack;
 public class MultiBlockGearFabricator extends MultiBlockMachine implements NotPlaceable {
 
   public static final SlimefunItemStack GEAR_FABRICATOR = new SupremeItemStack("SUPREME_MULTIBLOCK_GEAR",
-      Material.SMITHING_TABLE, "&e装备工厂", "", "&7&o你可以在这里制造武器，防具和工具！", "",
-      "&a多方块机器");
+      Material.SMITHING_TABLE, "&eNhà máy trang bị", "", "&7&oBạn có thể chế tạo vũ khí, giáp và công cụ ở đây!", "",
+      "&aMáy đa khối");
   public static final RecipeType MACHINE_GEAR_FABRICATOR = new RecipeType(
       new NamespacedKey(Supreme.inst(), "SUPREME_MULTIBLOCK_GEAR_KEY"), GEAR_FABRICATOR);
 
@@ -87,11 +86,12 @@ public class MultiBlockGearFabricator extends MultiBlockMachine implements NotPl
             }
           }
 
-          Bukkit.getScheduler().runTaskLater(Supreme.inst(),
-              () -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1F, 1F), 55L);
+          Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(dispenser.getLocation(),
+              task -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1F, 1F), 55L);
           for (int i = 1; i < 7; i++) {
-            Bukkit.getScheduler().runTaskLater(Supreme.inst(),
-                () -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_METAL_PLACE, 7F, 1F), i * 5L);
+            final long delayTicks = i * 5L;
+            Supreme.inst().getFoliaLib().getScheduler().runAtLocationLater(dispenser.getLocation(),
+                task -> p.getWorld().playSound(dispenser.getLocation(), Sound.BLOCK_METAL_PLACE, 7F, 1F), delayTicks);
           }
 
           if (furnaceInventory.getResult() == null) {
