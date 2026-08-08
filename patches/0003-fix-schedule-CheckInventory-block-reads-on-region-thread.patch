@@ -1,0 +1,71 @@
+From 760857b0633b2f0012b683981ce8617a3da2aca4 Mon Sep 17 00:00:00 2001
+From: mytai20100 <142713298+Mytai20100@users.noreply.github.com>
+Date: Sat, 8 Aug 2026 20:56:22 +0700
+Subject: [PATCH] fix: schedule CheckInventory block reads on region thread
+ (Folia)
+
+---
+ .../supreme/machine/CheckInventory.java       | 37 ++++++++++---------
+ 1 file changed, 20 insertions(+), 17 deletions(-)
+
+diff --git a/src/main/java/com/github/relativobr/supreme/machine/CheckInventory.java b/src/main/java/com/github/relativobr/supreme/machine/CheckInventory.java
+index 4c24ff3..3bce260 100644
+--- a/src/main/java/com/github/relativobr/supreme/machine/CheckInventory.java
++++ b/src/main/java/com/github/relativobr/supreme/machine/CheckInventory.java
+@@ -32,6 +32,7 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
+ import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
+ import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
+ import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
++import org.bukkit.Bukkit;
+ import org.bukkit.Material;
+ import org.bukkit.block.Block;
+ import org.bukkit.block.BlockFace;
+@@ -122,26 +123,28 @@ public class CheckInventory extends SlimefunItem implements InventoryBlock {
+       return;
+     }
+     countDelayTick = 0;
+-    if (!BlockStorage.hasInventory(b) || !(b.getBlockData() instanceof Lightable)) {
+-      BlockStorage.clearBlockInfo(b);
+-      return;
+-    }
+-    BlockMenu inv = BlockStorage.getInventory(b);
+-    final ItemStack itemStack = inv.getItemInSlot(MAIN_SLOT);
+-    if (itemStack == null) {
+-      if (isLight()) {
+-        changeLightable(b, false);
++    Bukkit.getRegionScheduler().run(Supreme.inst(), b.getLocation(), t -> {
++      if (!BlockStorage.hasInventory(b) || !(b.getBlockData() instanceof Lightable)) {
++        BlockStorage.clearBlockInfo(b);
++        return;
++      }
++      BlockMenu inv = BlockStorage.getInventory(b);
++      final ItemStack itemStack = inv.getItemInSlot(MAIN_SLOT);
++      if (itemStack == null) {
++        if (isLight()) {
++          changeLightable(b, false);
++        }
++        return;
+       }
+-      return;
+-    }
+ 
+-    final Block blockTarget = Stream.of(b.getRelative(BlockFace.DOWN), b.getRelative(BlockFace.UP),
+-        b.getRelative(BlockFace.NORTH), b.getRelative(BlockFace.EAST), b.getRelative(BlockFace.SOUTH),
+-        b.getRelative(BlockFace.WEST)).filter(
+-        x -> Material.TRAPPED_CHEST.equals(x.getType()) || Material.CHEST.equals(x.getType()) || Material.BARREL.equals(
+-            x.getType())).findFirst().orElse(null);
++      final Block blockTarget = Stream.of(b.getRelative(BlockFace.DOWN), b.getRelative(BlockFace.UP),
++          b.getRelative(BlockFace.NORTH), b.getRelative(BlockFace.EAST), b.getRelative(BlockFace.SOUTH),
++          b.getRelative(BlockFace.WEST)).filter(
++          x -> Material.TRAPPED_CHEST.equals(x.getType()) || Material.CHEST.equals(x.getType()) || Material.BARREL.equals(
++              x.getType())).findFirst().orElse(null);
+ 
+-    checkItemInInventory(itemStack, b, blockTarget);
++      checkItemInInventory(itemStack, b, blockTarget);
++    });
+   }
+ 
+   public static void checkItemInInventory(@Nonnull ItemStack itemStack, @Nonnull Block block, Block blockTarget) {
+-- 
+2.47.3
+
