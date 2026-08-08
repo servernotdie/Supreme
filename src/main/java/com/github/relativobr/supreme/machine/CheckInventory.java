@@ -32,6 +32,7 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -122,26 +123,28 @@ public class CheckInventory extends SlimefunItem implements InventoryBlock {
       return;
     }
     countDelayTick = 0;
-    if (!BlockStorage.hasInventory(b) || !(b.getBlockData() instanceof Lightable)) {
-      BlockStorage.clearBlockInfo(b);
-      return;
-    }
-    BlockMenu inv = BlockStorage.getInventory(b);
-    final ItemStack itemStack = inv.getItemInSlot(MAIN_SLOT);
-    if (itemStack == null) {
-      if (isLight()) {
-        changeLightable(b, false);
+    Bukkit.getRegionScheduler().run(Supreme.inst(), b.getLocation(), t -> {
+      if (!BlockStorage.hasInventory(b) || !(b.getBlockData() instanceof Lightable)) {
+        BlockStorage.clearBlockInfo(b);
+        return;
       }
-      return;
-    }
+      BlockMenu inv = BlockStorage.getInventory(b);
+      final ItemStack itemStack = inv.getItemInSlot(MAIN_SLOT);
+      if (itemStack == null) {
+        if (isLight()) {
+          changeLightable(b, false);
+        }
+        return;
+      }
 
-    final Block blockTarget = Stream.of(b.getRelative(BlockFace.DOWN), b.getRelative(BlockFace.UP),
-        b.getRelative(BlockFace.NORTH), b.getRelative(BlockFace.EAST), b.getRelative(BlockFace.SOUTH),
-        b.getRelative(BlockFace.WEST)).filter(
-        x -> Material.TRAPPED_CHEST.equals(x.getType()) || Material.CHEST.equals(x.getType()) || Material.BARREL.equals(
-            x.getType())).findFirst().orElse(null);
+      final Block blockTarget = Stream.of(b.getRelative(BlockFace.DOWN), b.getRelative(BlockFace.UP),
+          b.getRelative(BlockFace.NORTH), b.getRelative(BlockFace.EAST), b.getRelative(BlockFace.SOUTH),
+          b.getRelative(BlockFace.WEST)).filter(
+          x -> Material.TRAPPED_CHEST.equals(x.getType()) || Material.CHEST.equals(x.getType()) || Material.BARREL.equals(
+              x.getType())).findFirst().orElse(null);
 
-    checkItemInInventory(itemStack, b, blockTarget);
+      checkItemInInventory(itemStack, b, blockTarget);
+    });
   }
 
   public static void checkItemInInventory(@Nonnull ItemStack itemStack, @Nonnull Block block, Block blockTarget) {
