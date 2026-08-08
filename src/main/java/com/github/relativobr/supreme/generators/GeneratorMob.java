@@ -1,5 +1,6 @@
 package com.github.relativobr.supreme.generators;
 
+import com.github.relativobr.supreme.Supreme;
 import com.github.relativobr.supreme.resource.SupremeComponents;
 import com.github.relativobr.supreme.util.ItemGroups;
 import com.github.relativobr.supreme.util.SupremeItemStack;
@@ -8,7 +9,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.electric.AbstractEnergyProvider;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.blocks.BlockPosition;
@@ -152,7 +152,7 @@ public class GeneratorMob extends AbstractEnergyProvider {
 
   @ParametersAreNonnullByDefault
   private void updateSet(@Nonnull BlockPosition p, @Nonnull Location l) {
-    Slimefun.runSync(() -> {
+    Supreme.inst().getFoliaLib().getScheduler().runAtLocation(l, task -> {
       UUID uuid = cachedMob.getOrDefault(p, locateNearbyMob(l));
       if (isAnimalNearby(l, uuid)) {
         cachedMob.put(p, uuid);
